@@ -1,0 +1,92 @@
+/* The main css page used for the app overall */
+
+/* Centers text */
+.App {
+  text-align: center;
+}
+
+/* Logo height */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* Adjust's jack-jacks rotation speed, not currently in use */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* The headers used on the main app */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* Adjust's jack-jacks rotation spinning */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*open sans for p, quote, content
+Raleway header and labels*/
+
+
+/* Header style */
+h1 {
+  padding: 1em;
+  text-align: center;
+  color: rgb(200,0,0);
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Paragraph style */
+p.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; 
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* makes text orange */
+p.orange {
+  color: chocolate;
+}
+
+/* Additional elements for footer styling */
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* ensures content doesn't go off the page or interfere with other content */
+#content-wrap {
+  padding-bottom: 3rem;
+}
+
+/* Footer style across the site */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  text-align: center;
+  opacity: 0.5;
+}
+
