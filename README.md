@@ -15,3 +15,17 @@ The goal of this application is to address feelings of imposter syndrome that wo
 
 This solution works specifically to address the United Nations 5th Sustainable Development Goal: Gender Equality. Imposter syndrome can limit the opportunites women and minorities are comfortable pursuing in their work environment. 
 
+## Structure Diagram
+We chose to break down the architecture of our codebase by analyzing the React Components. Additionally, we highlighted some React packages, such as Survey, which were highly utilized by our program. 
+<img src="https://user-images.githubusercontent.com/46469460/150293942-e2bda9b4-894c-4aa5-9d27-e9d2b074a82d.png" width=70% height=50%>
+
+## Process Flow Diagram
+In our process flow, we highlighted both the client and backend sides, which are positioned on the left and right, respectively. This was documented with the intent of outlining both what the user experiences as well as the functionality. 
+<img src="https://user-images.githubusercontent.com/46469460/150294881-94722048-d93b-4310-9895-b91bdfc27b28.png" width=70% height=50%>
+
+## (Potential) Candidate Element
+Our tentative Candidate Elements are **QuizContent** _or_ the **ResultsPage** Components. 
+
+Both QuizContent and ResultsPage have the potential for refactoring as well as refining, with potential adjustments in function and variable naming, commenting, logic, etc.
+
+**_Note: An evaluation is still in the process for determining which one we will focus on._**   
