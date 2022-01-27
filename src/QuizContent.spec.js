@@ -1,4 +1,4 @@
-// import { QuizContent } from './QuizContent.js';
+import { QuizContent } from './QuizContent.js';
 
 test("Adding test", () => {
 
