@@ -1,8 +1,8 @@
 {
-  "name": "group4-in4matix",
+  "name": "project-1-ZachGrande",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://uw-info442-au21.github.io/group4-in4matix",
+  "homepage": "https://info443-wi22.github.io/project-1-ZachGrande",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",

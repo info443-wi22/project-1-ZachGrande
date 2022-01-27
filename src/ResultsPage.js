@@ -64,7 +64,7 @@ function contentToRender(results) {
     return(
       <div className="center">
         <p className="center">You have not taken the quiz.</p>
-        <Link aria-label="Take the quiz" className="btn btn-success" role="button" to="/group4-in4matix/quiz">
+        <Link aria-label="Take the quiz" className="btn btn-success" role="button" to="/project-1-ZachGrande/quiz">
                 Take the Quiz!
         </Link>
       </div>

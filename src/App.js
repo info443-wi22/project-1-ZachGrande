@@ -33,13 +33,13 @@ function App() {
         <MenuBar />
         {/* establishes routing between pages */}
         <Switch>
-          <Route path="/group4-in4matix/quiz"> <QuizPage results={results} setResults={setResults} freshResults={freshResults} /> </Route>
-          <Route path="/group4-in4matix/results"> <ResultsPage results={results} /> </Route>
-          <Route path="/group4-in4matix/type-1"> <Type1 /> </Route>
-          <Route path="/group4-in4matix/type-2"> <Type2 /> </Route>
-          <Route path="/group4-in4matix/type-3"> <Type3 /> </Route>
-          <Route path="/group4-in4matix/type-4"> <Type4 /> </Route>
-          <Route path="/group4-in4matix/type-5"> <Type5 /> </Route>
+          <Route path="/project-1-ZachGrande/quiz"> <QuizPage results={results} setResults={setResults} freshResults={freshResults} /> </Route>
+          <Route path="/project-1-ZachGrande/results"> <ResultsPage results={results} /> </Route>
+          <Route path="/project-1-ZachGrande/type-1"> <Type1 /> </Route>
+          <Route path="/project-1-ZachGrande/type-2"> <Type2 /> </Route>
+          <Route path="/project-1-ZachGrande/type-3"> <Type3 /> </Route>
+          <Route path="/project-1-ZachGrande/type-4"> <Type4 /> </Route>
+          <Route path="/project-1-ZachGrande/type-5"> <Type5 /> </Route>
           {/* <Route path="/group4-in4matix"> <HomePage /> </Route> */}
           <Route path="/"> <HomePage /> </Route>
         </Switch>
