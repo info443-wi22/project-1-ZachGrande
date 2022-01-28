@@ -30,7 +30,7 @@ function HomePage() {
       <br></br>
       <br></br>
       <div className="text-center">
-        <Link aria-label="Take the quiz" className="btn btn-success" role="button" to="/project-1-ZachGrande/quiz"> 
+        <Link aria-label="Take the quiz" className="btn btn-success" role="button" data-testid='take-quiz-btn' to="/project-1-ZachGrande/quiz"> 
           Take the quiz here!
         </Link>
       </div>

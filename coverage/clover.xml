@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1643380797833" clover="3.2.0">
+  <project timestamp="1643380797833" name="All files">
+    <metrics statements="68" coveredstatements="65" conditionals="24" coveredconditionals="22" methods="11" coveredmethods="10" elements="103" coveredelements="97" complexity="0" loc="68" ncloc="68" packages="1" files="4" classes="4"/>
+    <file name="App.js" path="/Users/alycianguyen/Desktop/INFO443/p1-current/src/App.js">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="18" count="11" type="stmt"/>
+      <line num="28" count="11" type="stmt"/>
+      <line num="30" count="11" type="stmt"/>
+    </file>
+    <file name="HomePage.js" path="/Users/alycianguyen/Desktop/INFO443/p1-current/src/HomePage.js">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="9" count="10" type="stmt"/>
+    </file>
+    <file name="QuizContent.js" path="/Users/alycianguyen/Desktop/INFO443/p1-current/src/QuizContent.js">
+      <metrics statements="52" coveredstatements="50" conditionals="20" coveredconditionals="18" methods="5" coveredmethods="5"/>
+      <line num="9" count="9" type="stmt"/>
+      <line num="10" count="9" type="stmt"/>
+      <line num="13" count="9" type="stmt"/>
+      <line num="16" count="9" type="stmt"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="29" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="30" count="2" type="stmt"/>
+      <line num="31" count="5" type="cond" truecount="1" falsecount="1"/>
+      <line num="32" count="0" type="stmt"/>
+      <line num="33" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="34" count="2" type="stmt"/>
+      <line num="35" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="36" count="2" type="stmt"/>
+      <line num="37" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="38" count="1" type="stmt"/>
+      <line num="40" count="0" type="stmt"/>
+      <line num="45" count="1" type="stmt"/>
+      <line num="49" count="1" type="stmt"/>
+      <line num="51" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="52" count="1" type="stmt"/>
+      <line num="53" count="1" type="stmt"/>
+      <line num="54" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="55" count="1" type="stmt"/>
+      <line num="56" count="1" type="stmt"/>
+      <line num="57" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="58" count="1" type="stmt"/>
+      <line num="59" count="1" type="stmt"/>
+      <line num="60" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="61" count="1" type="stmt"/>
+      <line num="62" count="1" type="stmt"/>
+      <line num="63" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="64" count="1" type="stmt"/>
+      <line num="65" count="1" type="stmt"/>
+      <line num="67" count="1" type="stmt"/>
+      <line num="68" count="1" type="stmt"/>
+      <line num="70" count="6" type="stmt"/>
+      <line num="73" count="1" type="stmt"/>
+      <line num="77" count="1" type="stmt"/>
+      <line num="84" count="1" type="stmt"/>
+      <line num="86" count="1" type="stmt"/>
+      <line num="90" count="9" type="stmt"/>
+      <line num="93" count="1" type="stmt"/>
+      <line num="94" count="1" type="stmt"/>
+      <line num="95" count="1" type="stmt"/>
+      <line num="96" count="1" type="stmt"/>
+      <line num="99" count="9" type="stmt"/>
+    </file>
+    <file name="QuizPage.js" path="/Users/alycianguyen/Desktop/INFO443/p1-current/src/QuizPage.js">
+      <metrics statements="12" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="3"/>
+      <line num="11" count="10" type="stmt"/>
+      <line num="12" count="10" type="stmt"/>
+      <line num="13" count="10" type="stmt"/>
+      <line num="17" count="10" type="stmt"/>
+      <line num="18" count="55" type="cond" truecount="2" falsecount="0"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="22" count="9" type="stmt"/>
+      <line num="27" count="0" type="stmt"/>
+      <line num="34" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="35" count="1" type="stmt"/>
+      <line num="47" count="9" type="stmt"/>
+      <line num="54" count="10" type="stmt"/>
+    </file>
+  </project>
+</coverage>
