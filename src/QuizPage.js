@@ -36,7 +36,7 @@ function QuizPage(props) {
         <div>
           <p className="center">Thank you for taking our quiz. Would you like to take it again?</p>
           <div className="btns text-center">
-            <Button aria-label="Retake quiz" className="btn-pad" variant="warning" onClick={resetResults}>Retake quiz</Button>
+            <Button aria-label="Retake quiz" data-testid="retake" className="btn-pad" variant="warning" onClick={resetResults}>Retake quiz</Button>
             <Link aria-label="View results of quiz" className="btn btn-success btn-pad" role="button" to="/project-1-ZachGrande/results"> 
                   View Results
             </Link>

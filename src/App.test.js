@@ -9,7 +9,7 @@ import QuizPage from './QuizPage';
 import userEvent from '@testing-library/user-event';
 
 //// might try something later
-// const questionChoices = [/micromanager/i, /Straight A/i];
+const questionChoices = [/micromanager/i, /Straight A/i];
 
 
 // testing full app rendering
@@ -262,5 +262,58 @@ test('completed quiz - done test page', async () => {
   userEvent.click(nextButton7);
   
   expect(screen.getByText(/Thank you/i)).toBeInTheDocument()
+})
+
+test('completed quiz - quiz state resets', async () => {
+  render(<App />, {wrapper: MemoryRouter});
+  const buttonRetake = screen.getByTestId('take-quiz-btn');
+  userEvent.click(buttonRetake);
+
+  const answerButtonQ1 = screen.getByText(/accomplish/i);
+  userEvent.click(answerButtonQ1);
+
+  const nextButton = screen.getByText('Next').closest('input');
+  userEvent.click(nextButton);
+
+  const answerButtonQ2 = screen.getByText(/None/i);
+  userEvent.click(answerButtonQ2);
+  
+  const nextButton2 = screen.getByText('Next').closest('input');
+  userEvent.click(nextButton2);
+
+  const answerButtonQ3 = screen.getByText(/sacrificed/i);
+  userEvent.click(answerButtonQ3);
+  
+  const nextButton3 = screen.getByText('Next').closest('input');
+  userEvent.click(nextButton3);
+
+  const answerButtonQ4 = screen.getByText(/an expert/i);
+  userEvent.click(answerButtonQ4);
+
+  const nextButton4 = screen.getByText('Next').closest('input');
+  userEvent.click(nextButton4);
+
+  const answerButtonQ5 = screen.getByText(/pressed/i);
+  userEvent.click(answerButtonQ5);
+  
+  const nextButton5 = screen.getByText('Next').closest('input');
+  userEvent.click(nextButton5);
+
+  const answerButtonQ6 = screen.getByText(/focus/i);
+  userEvent.click(answerButtonQ6);
+  
+  const nextButton6 = screen.getByText('Next').closest('input');
+  userEvent.click(nextButton6);
+
+  const answerButtonQ7 = screen.getByText(/Perfectionist/i);
+  userEvent.click(answerButtonQ7);
+  
+  const nextButton7 = screen.getByText('Complete').closest('input');
+  userEvent.click(nextButton7);
+
+  const resetButton = screen.getByTestId('retake');
+  userEvent.click(resetButton);
+  
+  expect(screen.getByText(/Retake quiz/i)).not.toBeInTheDocument();
 })
 

@@ -23,9 +23,11 @@ We chose to break down the architecture of our codebase by analyzing the React C
 In our process flow, we highlighted both the client and backend sides, which are positioned on the left and right, respectively. This was documented with the intent of outlining both what the user experiences as well as the functionality. 
 <img src="https://user-images.githubusercontent.com/46469460/150294881-94722048-d93b-4310-9895-b91bdfc27b28.png" width=70% height=50%>
 
-## (Potential) Candidate Element
-Our tentative Candidate Elements are **QuizContent** _or_ the **ResultsPage** Components. 
+## Candidate Element
+Our  Candidate Element is the **QuizContent** Components.
 
-Both QuizContent and ResultsPage have the potential for refactoring as well as refining, with potential adjustments in function and variable naming, commenting, logic, etc.
-
-**_Note: An evaluation is still in the process for determining which one we will focus on._**   
+## Testing
+* Ensure the most recent version of Node, v16.13.2, is installed.
+* Run `npm install` to download all relevant dependencies.
+* Run the command `npm run test`.
+* Run `npm test -- --coverage` to check code coverage.
