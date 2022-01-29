@@ -11,6 +11,7 @@ import userEvent from '@testing-library/user-event';
 //// might try something later
 const questionChoices = [/micromanager/i, /Straight A/i];
 
+describe('quiz pre-processing', () => {
 
 // testing full app rendering
 test('full app rendering/navigating', () => {
@@ -27,6 +28,10 @@ test('quiz prompt appearing on take quiz button', async () => {
   userEvent.click(buttonRetake);
   expect(screen.getByText(/Which Type of Imposter Syndrome Do You Have/i)).toBeInTheDocument()
 })
+
+});
+
+describe('all quiz questions appear', () =>  {
 
 test('question 1 appearing', async () => {
   render(<App />, {wrapper: MemoryRouter});
@@ -214,6 +219,10 @@ test('question 7 appearing', async () => {
   expect(screen.getByText(/Perfectionist/i)).toBeInTheDocument()
 })
 
+});
+
+describe('quiz post-processing', () => {
+
 test('completed quiz - done test page', async () => {
   render(<App />, {wrapper: MemoryRouter});
   const buttonRetake = screen.getByTestId('take-quiz-btn');
@@ -317,3 +326,4 @@ test('completed quiz - quiz state resets', async () => {
   expect(screen.getByText(/Retake quiz/i)).not.toBeInTheDocument();
 })
 
+});

@@ -31,3 +31,5 @@ Our  Candidate Element is the **QuizContent** Components.
 * Run `npm install` to download all relevant dependencies.
 * Run the command `npm run test`.
 * Run `npm test -- --coverage` to check code coverage.
+
+<img src="https://raw.githubusercontent.com/info443-wi22/project-1-ZachGrande/main/images/codeCoverage.png?token=GHSAT0AAAAAABQGNZOVKDOVOLDWJNL6REKCYPUSG2Q" width=70% height=50%>
