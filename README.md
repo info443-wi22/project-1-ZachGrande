@@ -34,7 +34,49 @@ This solution works specifically to address the United Nations 5th Sustainable D
 
 ## Code Structure Analysis
 
-### 1. What are the code-level architectural elements of the system?
+### Architectural Elements
+
+This project was built using React and utilizes two outside libraries to assist in constructing the site's interactive functionality. Architectural analysis is abstracted to consider individual React components.
+
+#### Components in Project
+
+**App**
+
+Renders all content in the project.
+
+**HomePage**
+
+Displays plain HTML explaining the mission statement of the project and Incredibles theme.
+
+**MenuBar**
+
+Directs user to different pages of the website.
+
+**QuizPage**
+
+Explains the purpose of the quiz. Either displays the quiz itself or an option to retake depending on whether the user has taken the quiz.
+
+**QuizContent**
+
+Utilizes SurveyJS to let the user interact with a quiz that determines their imposter syndrome archetype.
+
+**ResultsPage**
+
+Either displays the quiz results or directs the user to take the quiz, depending on the user's quiz status. This component utlizes CanvasJS to display an interactive visualization that conveys the user's imposter syndrome archetype breakdown.
+
+**Imposter Type 1 - 5**
+
+Static content that explains each imposter syndrome archetype with expert quotes and embedded videos that can help users understand each type.
+
+**Survey**
+
+Library that displays and processes the quiz to be taken by the user.
+
+**CanvasJSChart**
+
+Library that displays the visualization of the user's quiz results.
+
+# TODO: Explain relationships more clearly.
 
 <img src="https://user-images.githubusercontent.com/62479938/153046289-8d458fc2-45e0-4e57-9d63-5022221e5086.png" width=70% height=50%>
 
