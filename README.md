@@ -33,3 +33,19 @@ Our  Candidate Element is the **QuizContent** Components.
 * Run `npm test -- --coverage` to check code coverage.
 
 <img src="https://raw.githubusercontent.com/info443-wi22/project-1-ZachGrande/main/images/codeCoverage.png?token=GHSAT0AAAAAABQGNZOVNV4J4M53B5W7ZHUSYPUSNPQ" width=70% height=50%>
+
+_____
+
+# Project 1 Full Report
+
+## Code Structure Analysis
+
+### 1. What are the code-level architectural elements of the system?
+
+### 2. What are the code's process flows?
+
+## Architecture Assessment
+
+## Unit Tests
+
+## Refactored Code
