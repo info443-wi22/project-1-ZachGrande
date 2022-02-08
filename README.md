@@ -36,7 +36,7 @@ This solution works specifically to address the United Nations 5th Sustainable D
 
 ### 1. What are the code-level architectural elements of the system?
 
-<img src="https://user-images.githubusercontent.com/46469460/150293942-e2bda9b4-894c-4aa5-9d27-e9d2b074a82d.png" width=70% height=50%>
+<img src="https://user-images.githubusercontent.com/62479938/153046289-8d458fc2-45e0-4e57-9d63-5022221e5086.png" width=70% height=50%>
 
 ### 2. What are the code's process flows?
 
