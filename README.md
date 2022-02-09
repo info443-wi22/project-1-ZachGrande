@@ -81,34 +81,46 @@ Figure 2: Process Flow for the imposter syndrome quiz.
 
 This figure illustrates the logic used by the program for the interactive quiz experience. The logic included is primarily focused on the role `QuizContent.js` plays in the larger system.
 
-## Architecture Assessment PUT INTO PARAGRAPHS
+## Architecture Assessment 
 
-Element to focus on: Quiz Page, specifically `QuizPage.js` and its dependency, `QuizContent.js`.
+### Element Selection
+
+The focus of our report will be on the quiz aspects of our website. This would involve both `QuizPage.js` and its dependency, `QuizContent.js`. A large part of the quiz's functionality is located within `QuizContent.js`, and therefore, that element received the most analysis. That being said, much of the functionality of `QuizContent` is dependent and intertwined with the structure of `QuizPage`. Due to this relationship, there were aspects, particularly in refactoring and testing, where it was neccessary to evaluate `QuizPage.js` in order to analyze the performance of our primary element, `QuizContent.js`.
 
 ### Architectural Deficiencies
+
+Considering the overall structure and functionality of `QuizContent.js`, there were several aspects that called for improvement. These areas for improvement fall into the categories Code Smells, Documentation/Readability Concerns and Design Quality Deficiencies. 
+
+_Code Smells_ 
+
+Throughout `QuizContent`, it could be identified that there were several areas of improvement in regards to comments. The first code smell that can be located are **poorly written comments**. Poorly written comments typically present themselves as not being concise and not adding value to the program. That was a trend that could be seen throughout `QuizContent.js`, as several comments were broad, and therefore, unhelpful. One instance of this code smell is through the comment "`//style of the quiz (stone = black)`", which is considerably unneccessary for the program. A second code smell, which also is in regards to comments, is **redundant comment**. Redundant comments were found to be scattered throughout `QuizContent.js` quite often. This code smell involves commenting on code whose functionality or purpose is already clear. One notable occurrence of the redundant comment code smell involved the part of the `QuizContent.js` component where it is apparent that SurveyJS is passing results to be tallied, yet a comment was still placed stating that with  "`//final step: update state`". With poorly written comments and redundant comments, it could be asserted that these two code smells actually worked in conjunction throughout `QuizContent` on numerous occasions. It was a combination of these 2 code smells that ultimately made it clear that refactoring of comments was needed.  
 
 1. Mysterious Names
 Location: Throughout file
 
-2. Documentation/Readability Concerns
-
-3. Poorly written comment
+2. Poorly written comment
 Location: Throughout
 
-4. Unnecessary logs to console
+3. Unnecessary logs to console
 Location: Message when survey is complete with updated state
 
-5. Lazy element
+4. Lazy element
 Location: Updated state only saved to variable to be printed
 
-6. Long function
+5. Long function
 Location: Extracted `updateStateWithNewQuizResults()` from Quiz Content rendering function
 
-7. Redundant comment
+6. Redundant comment
 Location: Step where SurveyJS passes results to be tallied
 
-8. Speculative generality
+7. Speculative generality
 Location: `QuizContent.js` uses `event` parameter when it should be omitted
+
+_Documentation/Readability_ 
+
+1. Documentation/Readability Concerns
+
+_Design Quality Deficiencies_ 
 
 ## Unit Tests
 
