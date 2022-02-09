@@ -1,11 +1,11 @@
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import App from './App';
-import QuizContent from './QuizContent';
+import App from '../App';
+import QuizContent from '../QuizContent';
 import {MemoryRouter} from 'react-router-dom';
 import {rest} from 'msw';
 import {setupServer} from 'msw/node';
-import QuizPage from './QuizPage';
+import QuizPage from '../QuizPage';
 import userEvent from '@testing-library/user-event';
 
 //// might try something later
@@ -323,7 +323,7 @@ test('completed quiz - quiz state resets', async () => {
   const resetButton = screen.getByTestId('retake');
   userEvent.click(resetButton);
   
-  expect(screen.getByText(/Retake quiz/i)).not.toBeInTheDocument();
+  expect(screen.getByText(/Which of the following/i)).toBeInTheDocument();
 })
 
 });

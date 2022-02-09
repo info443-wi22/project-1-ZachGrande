@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>52/52</span>
+                <span class='fraction'>50/50</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>52/52</span>
+                <span class='fraction'>50/50</span>
             </div>
         
             
@@ -163,13 +163,12 @@
 <a name='L98'></a><a href='#L98'>98</a>
 <a name='L99'></a><a href='#L99'>99</a>
 <a name='L100'></a><a href='#L100'>100</a>
-<a name='L101'></a><a href='#L101'>101</a>
-<a name='L102'></a><a href='#L102'>102</a>
-<a name='L103'></a><a href='#L103'>103</a>
-<a name='L104'></a><a href='#L104'>104</a>
-<a name='L105'></a><a href='#L105'>105</a>
-<a name='L106'></a><a href='#L106'>106</a>
-<a name='L107'></a><a href='#L107'>107</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L101'></a><a href='#L101'>101</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -180,11 +179,22 @@
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -212,13 +222,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -258,119 +263,31 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import surveyJSON from './quiz.json';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+* This file allows the user to take a personality quiz that determines their
+* imposter syndrome archetype. The SurveyJS library is used to display the quiz
+* and bundle results into a JSON format. Upon completion of the quiz, results
+* are passed to the results page for the user to view.
+*/
+&nbsp;
+import surveyJSON from './quiz.json';
 import * as Survey from "survey-react";
 import "survey-react/survey.css";
 &nbsp;
-// Tracks the quiz results and updates the state variable created when the user enters or refreshes the page
 function QuizContent(props) {
 &nbsp;
-  // syncs with the state variable 
   const results = props.results;
   const setResults = props.setResults;
   
-  // style of the quiz (stone = black)
   Survey.StylesManager.applyTheme("stone");
 &nbsp;
-  // the variable used to track quiz results 
   var survey = new Survey.Model(surveyJSON);
 &nbsp;
-  // takes complete survey and converts to an array that's compatible with Canvas.js
-  function convertResults(survey, results) {
-&nbsp;
-    var p = 0;
-    var s = 0;
-    var sh = 0;
-    var e = 0;
-    var g = 0;
-    var n = 0;
-    
-    for (var key in survey) {
-      if(survey[key] === "P"){
-        p+=14.29;
-      } else if (survey[key] === "S") {
-        s+=14.29;
-      } else if (survey[key] === "SH") {
-        sh+=14.29;
-      } else if (survey[key] === "E") {
-        e+=14.29;
-      } else if (survey[key] === "G") {
-        g+=14.29;
-      } else {
-        n+=14.29;
-      } 
-    }
-&nbsp;
-    // delayed computation until after survey is complete
-    const handleResults = (event) =&gt; {
-      // create a copy of state and update elements as needed
-      // item: the current element of the results array
-      // index: the current entry number we are looking at
-      const resultsCopy = results.map((item) =&gt; {
-        // update current counts with new results
-        if (item.indexLabel === "Violet") {
-          item.y = p;
-          item.name = "Perfectionist";
-        } else if (item.indexLabel === "Dash") {
-          item.y = s;
-          item.name = "Soloist";
-        } else if (item.indexLabel === "Mr. Incredible") {
-          item.y = sh;
-          item.name = "Superhuman";
-        } else if (item.indexLabel === "Elastigirl") {
-          item.y = e;
-          item.name = "Expert";
-        } else if (item.indexLabel === "Edna Mode") {
-          item.y = g;
-          item.name = "Genius";
-        } else {
-          item.y = n;
-          item.name = "N/A";
-        }
-        return item;
-      })
-&nbsp;
-      setResults(resultsCopy);
-&nbsp;
-    }
-    // the format the canvas.js needs to display results
-    var currentResults = [{"y":p,"indexLabel":"Violet","name":"Perfectionist"},
-                          {"y":s,"indexLabel":"Dash", "name":"Soloist"},
-                          {"y":sh,"indexLabel":"Mr. Incredible", "name":"Superhuman"},
-                          {"y":e,"indexLabel":"Elastigirl", "name":"Expert"},
-                          {"y":g,"indexLabel":"Edna Mode","name":"Genius"},
-                          {"y":n,"indexLabel":"None", "name":"N/A"}];
-&nbsp;
-    handleResults(); // final step: update state
-&nbsp;
-    return currentResults;
-  }
-&nbsp;
-  // signals quiz has been complete and starts processing results by calling convertResults
   survey
     .onComplete
     .add(function (sender) {
       var surveyData = sender.data;
-      console.log("Survey done!");
-      var quizResults = convertResults(surveyData, results);
-      console.log(quizResults);
+      updateStateWithNewQuizResults(surveyData, results, setResults);
     })
     
   return(
@@ -378,6 +295,71 @@ function QuizContent(props) {
       &lt;Survey.Survey model={survey} /&gt;
     &lt;/div&gt;
   )
+}
+&nbsp;
+function updateStateWithNewQuizResults(survey, results, setResults) {
+&nbsp;
+  var perfectionist = 0;
+  var soloist = 0;
+  var superhuman = 0;
+  var expert = 0;
+  var genius = 0;
+  var none = 0;
+  
+  for (var key in survey) {
+    if(survey[key] === "P"){
+      perfectionist+=14.29;
+    } else if (survey[key] === "S") {
+      soloist+=14.29;
+    } else if (survey[key] === "SH") {
+      superhuman+=14.29;
+    } else if (survey[key] === "E") {
+      expert+=14.29;
+    } else if (survey[key] === "G") {
+      genius+=14.29;
+    } else {
+      none+=14.29;
+    } 
+  }
+&nbsp;
+    const handleResults = () =&gt; {
+    const resultsCopy = results.map((item) =&gt; {
+      if (item.indexLabel === "Violet") {
+        item.y = perfectionist;
+        item.name = "Perfectionist";
+      } else if (item.indexLabel === "Dash") {
+        item.y = soloist;
+        item.name = "Soloist";
+      } else if (item.indexLabel === "Mr. Incredible") {
+        item.y = superhuman;
+        item.name = "Superhuman";
+      } else if (item.indexLabel === "Elastigirl") {
+        item.y = expert;
+        item.name = "Expert";
+      } else if (item.indexLabel === "Edna Mode") {
+        item.y = genius;
+        item.name = "Genius";
+      } else {
+        item.y = none;
+        item.name = "N/A";
+      }
+      return item;
+    })
+&nbsp;
+    setResults(resultsCopy);
+&nbsp;
+  }
+&nbsp;
+  var currentResults = [{"y":perfectionist,"indexLabel":"Violet","name":"Perfectionist"},
+                        {"y":soloist,"indexLabel":"Dash", "name":"Soloist"},
+                        {"y":superhuman,"indexLabel":"Mr. Incredible", "name":"Superhuman"},
+                        {"y":expert,"indexLabel":"Elastigirl", "name":"Expert"},
+                        {"y":genius,"indexLabel":"Edna Mode","name":"Genius"},
+                        {"y":none,"indexLabel":"None", "name":"N/A"}];
+&nbsp;
+  handleResults();
+&nbsp;
+  return currentResults;
 }
 &nbsp;
 export default QuizContent;
@@ -388,7 +370,7 @@ export default QuizContent;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Fri Jan 28 2022 16:44:36 GMT-0800 (Pacific Standard Time)
+                at Wed Feb 09 2022 09:17:49 GMT-0800 (Pacific Standard Time)
             </div>
         <script src="prettify.js"></script>
         <script>
