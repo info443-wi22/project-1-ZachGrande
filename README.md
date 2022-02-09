@@ -93,34 +93,25 @@ Considering the overall structure and functionality of `QuizContent.js`, there w
 
 _Code Smells_ 
 
-Throughout `QuizContent`, it could be identified that there were several areas of improvement in regards to comments. The first code smell that can be located are **poorly written comments**. Poorly written comments typically present themselves as not being concise and not adding value to the program. That was a trend that could be seen throughout `QuizContent.js`, as several comments were broad, and therefore, unhelpful. One instance of this code smell is through the comment "`//style of the quiz (stone = black)`", which is considerably unneccessary for the program. A second code smell, which also is in regards to comments, is **redundant comment**. Redundant comments were found to be scattered throughout `QuizContent.js` quite often. This code smell involves commenting on code whose functionality or purpose is already clear. One notable occurrence of the redundant comment code smell involved the part of the `QuizContent.js` component where it is apparent that SurveyJS is passing results to be tallied, yet a comment was still placed stating that with  "`//final step: update state`". With poorly written comments and redundant comments, it could be asserted that these two code smells actually worked in conjunction throughout `QuizContent` on numerous occasions. It was a combination of these 2 code smells that ultimately made it clear that refactoring of comments was needed.  
+Throughout `QuizContent`, it could be identified that there were several areas of improvement in regards to comments. The first code smell that can be located is **Poorly Written Comments**. Poorly written comments typically present themselves as not being concise and not adding value to the program. That was a trend that could be seen throughout `QuizContent.js`, as several comments were broad, and therefore, unhelpful. One instance of this code smell is through the comment "`//style of the quiz (stone = black)`", which is considerably unneccessary for the program. A second code smell, which also is in regards to comments, is **Redundant Comment**. Redundant comments were found to be scattered throughout `QuizContent.js` quite often. This code smell involves commenting on code whose functionality or purpose is already clear. One notable occurrence of the redundant comment code smell involved the part of the `QuizContent.js` component where it is apparent that SurveyJS is passing results to be tallied, yet a comment was still placed stating that with  "`//final step: update state`". With poorly written comments and redundant comments, it could be asserted that these two code smells actually worked in conjunction throughout `QuizContent` on numerous occasions. It was a combination of these 2 code smells that ultimately made it clear that refactoring of comments was needed.  
 
-1. Mysterious Names
-Location: Throughout file
+A third code smell that was present throughout `QuizContent` is **Mysterious Names**. Mysterious can be generalized as poor naming conventions, and throughout our selected component, this was displayed as ambiguity. Essentially, it was determined that the naming of our variables and functions could be more concise. One significant example of this was with the function name `convertResults`, which could be considered broad and unclear. With this function name, it seems like the function name does not describe its functionality, and that makes it ambiguous. Another instance of Mysterious Names can be observed in the variables that were intended to help track the counts of results for each imposter type. The names were a singular letter, which could prompt confusion since it lacks clarity. 
 
-2. Poorly written comment
-Location: Throughout
+A fourth code smell involves placing unnecessary logs to the console within our program. During evaluation of our architecture, `console.log` statements could be seen scattered throughout our program, and although they may have been helpful during development, they lost purpose as development continued and become unhelpful. At this point, the logging statements essentially were taking up space. This was revealed with the logging statement that printed a message containing the state when the survey was completed by a user. This could be considered as the **Too Much Information** code smell, as these log statements attempted to add substance to a program that could remain simplified without the log statements. 
 
-3. Unnecessary logs to console
-Location: Message when survey is complete with updated state
+A fifth code smell that was discovered during evaluation is the **Lazy Element**. Lazy elements embody code that was intended to be helpful, but ultimately did not contribute to a program. For `QuizContent`, this played out as a result of our fourth identified code smell (Too Much Information). It was revealed that without the logging statements, we were left with variables that did not serve a purpose anymore. While the example provided in the evaluation of the fourth code smell in our program attempted to log a message to the console indicating that the survey was completed, this Lazy Element code smell presented itself as the variable that held this message intended to be sent to the console.
 
-4. Lazy element
-Location: Updated state only saved to variable to be printed
+Although a minor instance, the code smell **Speculative Generality** was detailed in our `QuizContent` code through the occurrence of a parameter that was not needed or used. What was discovered was that an `event` parameter was included within `handleResults`, but it was not utilized at all. In fact, this code smell could've been the remnants of a Lazy Element code smell, in which much potential was intended with this event parameter, but that was not able to be achieved or its purpose was lost.  
 
-5. Long function
-Location: Extracted `updateStateWithNewQuizResults()` from Quiz Content rendering function
-
-6. Redundant comment
-Location: Step where SurveyJS passes results to be tallied
-
-7. Speculative generality
-Location: `QuizContent.js` uses `event` parameter when it should be omitted
+Considerably the most major code smell throughout our selected component was **Long Function**. Initially, `QuizContent` consisted of a function embedded within a function, leading to potential readability concerns, but more so a large system that could lead to overwhelming complexity in the future. The rendering function within `QuizContent` is a prime example of this, as it was clear that the function consisted of many moving parts that could be extracted. 
 
 _Documentation/Readability_ 
 
-1. Documentation/Readability Concerns
+In regards to documentation, our initial codebase lacked documentation. For `QuizContent`, the comments were determined to be unhelpful, which implied that no helpful comments existed. Furthermore, without reading throught the `QuizContent.js` file, it could be very difficult to decipher the purpose of the element. Considering readability, `QuizContent` involved several problems, especially taking into account the code smells that were found (Long Function, Mysterious Names, etc). 
 
 _Design Quality Deficiencies_ 
+
+TBD
 
 ## Unit Tests
 
