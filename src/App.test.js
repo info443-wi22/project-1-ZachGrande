@@ -23,9 +23,9 @@ test('full app rendering/navigating', () => {
 
 test('quiz prompt appearing on take quiz button', async () => {
   render(<App />, {wrapper: MemoryRouter});
-  const buttonRetake = screen.getByTestId('take-quiz-btn');
+  const takeQuizButton = screen.getByTestId('take-quiz-btn');
 
-  userEvent.click(buttonRetake);
+  userEvent.click(takeQuizButton);
   expect(screen.getByText(/Which Type of Imposter Syndrome Do You Have/i)).toBeInTheDocument()
 })
 
@@ -35,17 +35,17 @@ describe('all quiz questions appear', () =>  {
 
 test('question 1 appearing', async () => {
   render(<App />, {wrapper: MemoryRouter});
-  const buttonRetake = screen.getByTestId('take-quiz-btn');
+  const takeQuizButton = screen.getByTestId('take-quiz-btn');
 
-  userEvent.click(buttonRetake);
+  userEvent.click(takeQuizButton);
   expect(screen.getByText(/You have been accused of being a micromanager/i)).toBeInTheDocument()
 })
 
 // need more efficient way to test questions after q1
 test('question 2 appearing', async () => {
   render(<App />, {wrapper: MemoryRouter});
-  const buttonRetake = screen.getByTestId('take-quiz-btn');
-  userEvent.click(buttonRetake);
+  const takeQuizButton = screen.getByTestId('take-quiz-btn');
+  userEvent.click(takeQuizButton);
 
   const answerButtonQ1 = screen.getByText(/micromanager/i);
   userEvent.click(answerButtonQ1);
@@ -57,8 +57,8 @@ test('question 2 appearing', async () => {
 
 test('question 3 appearing', async () => {
   render(<App />, {wrapper: MemoryRouter});
-  const buttonRetake = screen.getByTestId('take-quiz-btn');
-  userEvent.click(buttonRetake);
+  const takeQuizButton = screen.getByTestId('take-quiz-btn');
+  userEvent.click(takeQuizButton);
 
   const answerButtonQ1 = screen.getByText(/micromanager/i);
   userEvent.click(answerButtonQ1);
@@ -78,8 +78,8 @@ test('question 3 appearing', async () => {
 // it's so repetitive but this is just for elaboration of concept - will adjust later
 test('question 4 appearing', async () => {
   render(<App />, {wrapper: MemoryRouter});
-  const buttonRetake = screen.getByTestId('take-quiz-btn');
-  userEvent.click(buttonRetake);
+  const takeQuizButton = screen.getByTestId('take-quiz-btn');
+  userEvent.click(takeQuizButton);
 
   const answerButtonQ1 = screen.getByText(/micromanager/i);
   userEvent.click(answerButtonQ1);
@@ -104,8 +104,8 @@ test('question 4 appearing', async () => {
 
 test('question 5 appearing', async () => {
   render(<App />, {wrapper: MemoryRouter});
-  const buttonRetake = screen.getByTestId('take-quiz-btn');
-  userEvent.click(buttonRetake);
+  const takeQuizButton = screen.getByTestId('take-quiz-btn');
+  userEvent.click(takeQuizButton);
 
   const answerButtonQ1 = screen.getByText(/micromanager/i);
   userEvent.click(answerButtonQ1);
@@ -136,8 +136,8 @@ test('question 5 appearing', async () => {
 
 test('question 6 appearing', async () => {
   render(<App />, {wrapper: MemoryRouter});
-  const buttonRetake = screen.getByTestId('take-quiz-btn');
-  userEvent.click(buttonRetake);
+  const takeQuizButton = screen.getByTestId('take-quiz-btn');
+  userEvent.click(takeQuizButton);
 
   // answer must be checked before next button is available
   const answerButtonQ1 = screen.getByText(/micromanager/i);
@@ -177,8 +177,8 @@ test('question 6 appearing', async () => {
 
 test('question 7 appearing', async () => {
   render(<App />, {wrapper: MemoryRouter});
-  const buttonRetake = screen.getByTestId('take-quiz-btn');
-  userEvent.click(buttonRetake);
+  const takeQuizButton = screen.getByTestId('take-quiz-btn');
+  userEvent.click(takeQuizButton);
 
   const answerButtonQ1 = screen.getByText(/micromanager/i);
   userEvent.click(answerButtonQ1);
@@ -225,8 +225,8 @@ describe('quiz post-processing', () => {
 
 test('completed quiz - done test page', async () => {
   render(<App />, {wrapper: MemoryRouter});
-  const buttonRetake = screen.getByTestId('take-quiz-btn');
-  userEvent.click(buttonRetake);
+  const takeQuizButton = screen.getByTestId('take-quiz-btn');
+  userEvent.click(takeQuizButton);
 
   const answerButtonQ1 = screen.getByText(/micromanager/i);
   userEvent.click(answerButtonQ1);
@@ -275,8 +275,8 @@ test('completed quiz - done test page', async () => {
 
 test('completed quiz - quiz state resets', async () => {
   render(<App />, {wrapper: MemoryRouter});
-  const buttonRetake = screen.getByTestId('take-quiz-btn');
-  userEvent.click(buttonRetake);
+  const takeQuizButton = screen.getByTestId('take-quiz-btn');
+  userEvent.click(takeQuizButton);
 
   const answerButtonQ1 = screen.getByText(/accomplish/i);
   userEvent.click(answerButtonQ1);

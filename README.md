@@ -85,7 +85,7 @@ This figure illustrates the logic used by the program for the interactive quiz e
 
 ### Element Selection
 
-The focus of our report will be on the quiz aspects of our website. This would involve both `QuizPage.js` and its dependency, `QuizContent.js`. A large part of the quiz's functionality is located within `QuizContent.js`, and therefore, that element received the most analysis. That being said, much of the functionality of `QuizContent` is dependent and intertwined with the structure of `QuizPage`. Due to this relationship, there were aspects, particularly in refactoring and testing, where it was neccessary to evaluate `QuizPage.js` in order to analyze the performance of our primary element, `QuizContent.js`.
+The focus of our report will be on the quiz aspects of our website. A large part of the quiz's functionality is located within `QuizContent.js`, and therefore, that element received the most analysis. 
 
 ### Architectural Deficiencies
 
@@ -111,11 +111,33 @@ In regards to documentation, our initial codebase lacked documentation. For `Qui
 
 _Design Quality Deficiencies_ 
 
-TBD
+TBD -- might add after unit test section complete
 
-## Unit Tests
+## Unit / Integration Tests
 
-## Testing
+### Testing Overview 
+As mentioned, `QuizContent` was the primary candidate for our architectural evaluation. Although that is the case, this element was chosen since we wanted to focus on this quiz and its functionality. That being said, `QuizPage.js` must be in consideration for testing as well, since much of the functionality of `QuizContent` is dependent and intertwined with the structure of `QuizPage`. Due to this relationship, there were aspects, particularly in testing, where it was neccessary to evaluate and utilize `QuizPage.js` in order to analyze the performance of our primary element, `QuizContent.js`.
+
+_To conduct our integration tests, we utilized Jest within the testing library framework._
+
+As a whole, we chose to test functionality of the quiz that the user takes. This involves aspects such as the navigation to the quiz, the navigation between questions of the quiz, the content of the quiz showing up and the quiz processing that it has been completed. To do so, elements of `QuizPage` had to be simulated in order to hit endpoints for answers within `QuizContent`.
+
+### Testing Breakdown
+| Test # | Test Case (from `test()`) | Intention | Process | Input | Expected Output |
+|---|---|---|---|---|---|
+| 1 | full app rendering/navigating | Our first test case was constructed in attempts  to ensure that the app renders. Essentially this  test case was to ensure that the application is  running.  | This was utilized to ensure that  the starting point for a user would  be at the 'welcome page' of our  application. Not only did this mean  that the App appeared on a page for a  user, but it also would simulate the  starting point for a user. | `<App />` | 'Mission Statement'  appears on the page |
+| 2 | quiz prompt appearing on take quiz button | This test case embodies the process of getting to the quiz page. It was implemented to ensure that when a button to take the quiz is clicked, the introduction to the quiz page appears.| The implementation of this test case is meant to continue where the previous test case left off, and then progress to the next step for a user, which is to navigate to the quiz page. This implies following the same steps as the previous test, and therefore emphasizes how the success of the following tests are dependent on the previous test cases. The automated test for this simulates the app rendering, and then a user clicking the button to take the Imposter Type quiz, and tests the contents of the page to ensure the correct content is displayed. This proves that the correct page was displayed. | `<App />` | 'Which Type of Imposter Syndrome Do You Have' appears on the page |
+| 3 | question 1 appearing |  |  | `<App />` | 'You have been accused of being a micromanager' appearing on the page |
+| 4 | question 2 appearing |  |  | `<App />` | 'You get stressed when you’re not working and find downtime wasteful' appearing on the page |
+| 5 | question 3 appearing |  |  | `<App />` | 'sacrificed your hobbies and passions for work' to be on the page |
+| 6 | question 4 appearing |  |  | `<App />` | 'an expert' to be on the page |
+| 7 | question 5 appearing |  |  | `<App />` | 'pressed' to be on the page |
+| 8 | question 6 appearing |  |  | `<App />` | 'focus' to be on the page |
+| 9 | question 7 appearing |  |  | `<App />` | 'Perfectionist' to be on the page |
+| 10 | completed quiz - done test page |  |  | `<App />` | 'Thank you' to be on the page|
+| 11 | completed quiz - quiz state resets |  |  | `<App />` | 'Retake quiz' to _not_ be on the page|
+
+### Testing Instructions 
 * Ensure the most recent version of Node, v16.13.2, is installed.
 * Run `npm install` to download all relevant dependencies.
 * Run the command `npm run test`.
