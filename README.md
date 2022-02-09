@@ -93,20 +93,20 @@ Location: Throughout file
 
 2. Documentation/Readability Concerns
 
-3. Comments
-Location: Throughout file
+3. Poorly written comment
+Location: Throughout
 
-4. Unnecessary logs to console (find code smell name)
-Location: When Survey is processing results
+4. Unnecessary logs to console
+Location: Message when survey is complete with updated state
 
-5. Duplicated code
-Location: QuizPage and ResultsPage determine quiz taken status
+5. Lazy element
+Location: Updated state only saved to variable to be printed
 
 6. Long function
 Location: `convertResults()` takes on too much computation
 
 7. Redundant comment
-Location: `QuizPage.js` over-explains logic of `hasTakenQuiz()` use when deciding content to render
+Location: Step where SurveyJS passes results to be tallied
 
 8. Speculative generality
 Location: `QuizContent.js` uses `event` parameter when it should be omitted

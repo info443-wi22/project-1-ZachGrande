@@ -1,21 +1,23 @@
+/*
+* This file allows the user to take a personality quiz that determines their
+* imposter syndrome archetype. The SurveyJS library is used to display the quiz
+* and bundle results into a JSON format. Upon completion of the quiz, results
+* are passed to the results page for the user to view.
+*/
+
 import surveyJSON from './quiz.json';
 import * as Survey from "survey-react";
 import "survey-react/survey.css";
 
-// Tracks the quiz results and updates the state variable created when the user enters or refreshes the page
 function QuizContent(props) {
 
-  // syncs with the state variable 
   const results = props.results;
   const setResults = props.setResults;
   
-  // style of the quiz (stone = black)
   Survey.StylesManager.applyTheme("stone");
 
-  // the variable used to track quiz results 
   var survey = new Survey.Model(surveyJSON);
 
-  // takes complete survey and converts to an array that'soloist compatible with Canvas.js
   function updateStateWithNewQuizResults(survey, results) {
 
     var perfectionist = 0;
@@ -41,14 +43,8 @@ function QuizContent(props) {
       } 
     }
 
-    // delayed computation until after survey is complete
-    // const handleResults = (event) => {
       const handleResults = () => {
-      // create a copy of state and update elements as needed
-      // item: the current element of the results array
-      // index: the current entry number we are looking at
       const resultsCopy = results.map((item) => {
-        // update current counts with new results
         if (item.indexLabel === "Violet") {
           item.y = perfectionist;
           item.name = "Perfectionist";
@@ -74,7 +70,7 @@ function QuizContent(props) {
       setResults(resultsCopy);
 
     }
-    // the format the canvas.js needs to display results
+
     var currentResults = [{"y":perfectionist,"indexLabel":"Violet","name":"Perfectionist"},
                           {"y":soloist,"indexLabel":"Dash", "name":"Soloist"},
                           {"y":superhuman,"indexLabel":"Mr. Incredible", "name":"Superhuman"},
@@ -82,19 +78,16 @@ function QuizContent(props) {
                           {"y":genius,"indexLabel":"Edna Mode","name":"Genius"},
                           {"y":none,"indexLabel":"None", "name":"N/A"}];
 
-    handleResults(); // final step: update state
+    handleResults();
 
     return currentResults;
   }
 
-  // signals quiz has been complete and starts processing results by calling updateStateWithNewQuizResults
   survey
     .onComplete
     .add(function (sender) {
       var surveyData = sender.data;
-      console.log("Survey done!");
-      var quizResults = updateStateWithNewQuizResults(surveyData, results);
-      console.log(quizResults);
+      updateStateWithNewQuizResults(surveyData, results);
     })
     
   return(
