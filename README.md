@@ -82,7 +82,34 @@ Library that displays the visualization of the user's quiz results.
 
 ### 2. What are the code's process flows?
 
-## Architecture Assessment
+## Architecture Assessment PUT INTO PARAGRAPHS
+
+Element to focus on: Quiz Page, specifically `QuizPage.js` and its dependency, `QuizContent.js`.
+
+### Architectural Deficiencies
+
+1. Mysterious Names
+Location: Throughout file
+
+2. Documentation/Readability Concerns
+
+3. Comments
+Location: Throughout file
+
+4. Unnecessary logs to console (find code smell name)
+Location: When Survey is processing results
+
+5. Duplicated code
+Location: QuizPage and ResultsPage determine quiz taken status
+
+6. Long function
+Location: `convertResults()` takes on too much computation
+
+7. Redundant comment
+Location: `QuizPage.js` over-explains logic of `hasTakenQuiz()` use when deciding content to render
+
+8. Speculative generality
+Location: `QuizContent.js` uses `event` parameter when it should be omitted
 
 ## Unit Tests
 

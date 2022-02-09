@@ -15,56 +15,57 @@ function QuizContent(props) {
   // the variable used to track quiz results 
   var survey = new Survey.Model(surveyJSON);
 
-  // takes complete survey and converts to an array that's compatible with Canvas.js
-  function convertResults(survey, results) {
+  // takes complete survey and converts to an array that'soloist compatible with Canvas.js
+  function updateStateWithNewQuizResults(survey, results) {
 
-    var p = 0;
-    var s = 0;
-    var sh = 0;
-    var e = 0;
-    var g = 0;
-    var n = 0;
+    var perfectionist = 0;
+    var soloist = 0;
+    var superhuman = 0;
+    var expert = 0;
+    var genius = 0;
+    var none = 0;
     
     for (var key in survey) {
       if(survey[key] === "P"){
-        p+=14.29;
+        perfectionist+=14.29;
       } else if (survey[key] === "S") {
-        s+=14.29;
+        soloist+=14.29;
       } else if (survey[key] === "SH") {
-        sh+=14.29;
+        superhuman+=14.29;
       } else if (survey[key] === "E") {
-        e+=14.29;
+        expert+=14.29;
       } else if (survey[key] === "G") {
-        g+=14.29;
+        genius+=14.29;
       } else {
-        n+=14.29;
+        none+=14.29;
       } 
     }
 
     // delayed computation until after survey is complete
-    const handleResults = (event) => {
+    // const handleResults = (event) => {
+      const handleResults = () => {
       // create a copy of state and update elements as needed
       // item: the current element of the results array
       // index: the current entry number we are looking at
       const resultsCopy = results.map((item) => {
         // update current counts with new results
         if (item.indexLabel === "Violet") {
-          item.y = p;
+          item.y = perfectionist;
           item.name = "Perfectionist";
         } else if (item.indexLabel === "Dash") {
-          item.y = s;
+          item.y = soloist;
           item.name = "Soloist";
         } else if (item.indexLabel === "Mr. Incredible") {
-          item.y = sh;
+          item.y = superhuman;
           item.name = "Superhuman";
         } else if (item.indexLabel === "Elastigirl") {
-          item.y = e;
+          item.y = expert;
           item.name = "Expert";
         } else if (item.indexLabel === "Edna Mode") {
-          item.y = g;
+          item.y = genius;
           item.name = "Genius";
         } else {
-          item.y = n;
+          item.y = none;
           item.name = "N/A";
         }
         return item;
@@ -74,25 +75,25 @@ function QuizContent(props) {
 
     }
     // the format the canvas.js needs to display results
-    var currentResults = [{"y":p,"indexLabel":"Violet","name":"Perfectionist"},
-                          {"y":s,"indexLabel":"Dash", "name":"Soloist"},
-                          {"y":sh,"indexLabel":"Mr. Incredible", "name":"Superhuman"},
-                          {"y":e,"indexLabel":"Elastigirl", "name":"Expert"},
-                          {"y":g,"indexLabel":"Edna Mode","name":"Genius"},
-                          {"y":n,"indexLabel":"None", "name":"N/A"}];
+    var currentResults = [{"y":perfectionist,"indexLabel":"Violet","name":"Perfectionist"},
+                          {"y":soloist,"indexLabel":"Dash", "name":"Soloist"},
+                          {"y":superhuman,"indexLabel":"Mr. Incredible", "name":"Superhuman"},
+                          {"y":expert,"indexLabel":"Elastigirl", "name":"Expert"},
+                          {"y":genius,"indexLabel":"Edna Mode","name":"Genius"},
+                          {"y":none,"indexLabel":"None", "name":"N/A"}];
 
     handleResults(); // final step: update state
 
     return currentResults;
   }
 
-  // signals quiz has been complete and starts processing results by calling convertResults
+  // signals quiz has been complete and starts processing results by calling updateStateWithNewQuizResults
   survey
     .onComplete
     .add(function (sender) {
       var surveyData = sender.data;
       console.log("Survey done!");
-      var quizResults = convertResults(surveyData, results);
+      var quizResults = updateStateWithNewQuizResults(surveyData, results);
       console.log(quizResults);
     })
     
