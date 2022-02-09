@@ -103,7 +103,7 @@ Location: Message when survey is complete with updated state
 Location: Updated state only saved to variable to be printed
 
 6. Long function
-Location: `convertResults()` takes on too much computation
+Location: Extracted `updateStateWithNewQuizResults()` from Quiz Content rendering function
 
 7. Redundant comment
 Location: Step where SurveyJS passes results to be tallied
