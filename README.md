@@ -162,5 +162,3 @@ As a whole, we chose to test functionality of the quiz that the user takes. This
 <img src="https://user-images.githubusercontent.com/62479938/153254571-5bb7874e-642c-4608-92bf-6f8fad9a7cab.png" alt="code-coverage" width=80% height=50%>
 
 Figure 3: A snippet from the console to illustrate 100% code coverage for both `QuizContent.js` and `QuizPage.js`. `QuizPage.js` is included because it is a direct parent of `QuizContent.js`.
-
-## Refactored Code
